@@ -13,15 +13,15 @@ import sys
 
 def img2ascii(img, width, outputFileName, inverted):
     # choose the horizontal dimension of the image
-    img = ImageOps.grayscale(img)
     w, h = img.size 
     if width > w:
-        print(f"FAILED: Choose a size smaller than {w}")
+        print(f"FAILED: Choose a size smaller than or equal to {w}")
         return False
     asciiWidth = width
     ratio = asciiWidth / w
     asciiHeight = int(ratio * (h/2))
     img = img.resize((asciiWidth, asciiHeight))                 # resize the image to the ascii dimensions
+    img = ImageOps.grayscale(img)
 
     scale = " .:-=+*#%@"
     main_print = []
