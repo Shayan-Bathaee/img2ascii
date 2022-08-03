@@ -27,6 +27,11 @@ There are a few different flags in this command. Here is what they mean:
   - If the output file doesn't exist, it will be created.
   - If no output file parameter is provided, the program will print the output to the console. 
 The order of these flags does not matter.
+
+Note: To quickly review the usage, enter the following command:
+`python img2ascii.py -usage`
+
+The output will show the standard command above, as well as a link to this GitHub repository
  
  ## Implementation
  A high-level description of the logical flow of this program is as follows:
