@@ -44,8 +44,7 @@ def img2ascii(img, width, outputFileName, inverted):
         outputFile.write(''.join(main_print))
 
 
-img = Image.open(sys.argv[1]) # get the name of the image
-width = 100                   # set default parameters
+width = 100           # set default parameters
 outputFileName = ""
 inverted = False
 
@@ -54,8 +53,13 @@ if '-w' in sys.argv:
     width = int(sys.argv[sys.argv.index('-w') + 1])
 if '-o' in sys.argv:
     outputFileName = sys.argv[sys.argv.index('-o') + 1]
-if '-inverted' in sys.argv:
-    inverted = True
-    
+if '-i' in sys.argv:
+    if sys.argv[sys.argv.index('-i') + 1] == 'inverted':
+        inverted = True
 
-img2ascii(img, width, outputFileName, inverted)
+if '-usage' in sys.argv:
+    print("\tUSAGE: python img2ascii.py <image-file> -w <ascii-width> -i <inverted/non-inverted> -o <output-file>")
+    print("\tSee https://github.com/Shayan-Bathaee/img2ascii for more information")
+else:
+    img = Image.open(sys.argv[1]) # get the name of the image
+    img2ascii(img, width, outputFileName, inverted)
