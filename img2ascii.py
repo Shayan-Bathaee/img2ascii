@@ -49,13 +49,13 @@ width = 100                   # set default parameters
 outputFileName = ""
 inverted = False
 
+
 if '-w' in sys.argv:
     width = int(sys.argv[sys.argv.index('-w') + 1])
 if '-o' in sys.argv:
     outputFileName = sys.argv[sys.argv.index('-o') + 1]
-if '-i' in sys.argv:
-    if sys.argv[sys.argv.index('-i') + 1] == 'inverted':
-        inverted = True
+if '-inverted' in sys.argv:
+    inverted = True
     
 
 img2ascii(img, width, outputFileName, inverted)
