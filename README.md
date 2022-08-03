@@ -28,18 +28,17 @@ There are a few different flags in this command. Here is what they mean:
   - If no output file parameter is provided, the program will print the output to the console. 
 The order of these flags does not matter.
 
-Note: To quickly review the usage, enter the following command:
-`python img2ascii.py -usage`
+To quickly review the usage from the command promt, enter the following command:
 
-The output will show the standard command above, as well as a link to this GitHub repository
- 
- ## Implementation
- A high-level description of the logical flow of this program is as follows:
- 1. Take in the image from user input.
- 2. Greyscale the image (make the image black and white).
- 3. Resize the image to match the final dimensions of the ASCII art.
- 4. For every pixel in the image, get the color code of that pixel.
- 5. Scale that value down so it can be used to index the character set (` .:-=+*#%@`).
+`python img2ascii.py -usage` 
+
+## Implementation
+A high-level description of the logical flow of this program is as follows:
+1. Take in the image from user input.
+2. Greyscale the image (make the image black and white).
+3. Resize the image to match the final dimensions of the ASCII art.
+4. For every pixel in the image, get the color code of that pixel.
+5. Scale that value down so it can be used to index the character set (` .:-=+*#%@`).
  
 Some other important attributes to the program:
 - The height of the ASCII text art is determined using the following process:
