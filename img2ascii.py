@@ -54,12 +54,16 @@ if '-w' in sys.argv:
 if '-o' in sys.argv:
     outputFileName = sys.argv[sys.argv.index('-o') + 1]
 if '-i' in sys.argv:
-    if sys.argv[sys.argv.index('-i') + 1] == 'inverted':
-        inverted = True
+    inverted = True
 
-if '-usage' in sys.argv:
-    print("\tUSAGE: python img2ascii.py <image-file> -w <ascii-width> -i <inverted/non-inverted> -o <output-file>")
-    print("\tSee https://github.com/Shayan-Bathaee/img2ascii for more information")
+if '-help' in sys.argv:
+    print("\n\tUSAGE: python img2ascii.py <image-file>")
+    print("\tFLAGS:")
+    print("\t\t'-help': Display this message")
+    print("\t\t'-w': Specify the character width of the ASCII image")
+    print("\t\t'-i': Invert the image")
+    print("\t\t'-o': Specify an output file")
+    print("\tSee https://github.com/Shayan-Bathaee/img2ascii for more information\n")
 else:
     img = Image.open(sys.argv[1]) # get the name of the image
     img2ascii(img, width, outputFileName, inverted)
