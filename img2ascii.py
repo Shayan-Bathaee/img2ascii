@@ -59,10 +59,10 @@ if '-i' in sys.argv:
 if '-help' in sys.argv:
     print("\n\tUSAGE: python img2ascii.py <image-file>")
     print("\tFLAGS:")
-    print("\t\t'-help': Display this message")
-    print("\t\t'-w': Specify the character width of the ASCII image")
-    print("\t\t'-i': Invert the image")
-    print("\t\t'-o': Specify an output file")
+    print("\t\t-help        Display this message")
+    print("\t\t-w           Specify the character width of the ASCII image")
+    print("\t\t-i           Invert the image")
+    print("\t\t-o           Specify an output file")
     print("\tSee https://github.com/Shayan-Bathaee/img2ascii for more information\n")
 else:
     img = Image.open(sys.argv[1]) # get the name of the image
