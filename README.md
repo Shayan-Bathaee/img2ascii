@@ -14,14 +14,14 @@ To run img2ascii, open up a command prompt window and navigate to the location o
 `python img2ascii.py <image-file> -w <ascii-width> -i <inverted/non-inverted> -o <output-file>`
 
 There are a few different flags in this command. Here is what they mean:
-- `-w` is the character width of the outputted ASCII text art.
+- `-w` specifies the character width of the outputted ASCII text art.
   - For example, putting `-w 500` will result in ASCII art that is 500 characters wide.
   - If the width parameter is greater than the width of the image, an error will occur and the program will display the maximum width you can choose.
   - If no width parameter is provided, the default width will be 100 characters.
-- `-i` tells the program to invert or not invert the image.
-  - If your computer is in dark mode, putting `-i inverted` will make the picture look normal over the dark background.
-  - If no invert parameter is provided, the default setting is non-inverted.
-- `-o` is the name of the output file.
+- `-i` tells the program to invert the image.
+  - If your computer is in dark mode, putting `-i` will make the picture look normal over the dark background.
+  - If no invert flag is provided, the default setting is non-inverted.
+- `-o` specifies the name of the output file.
   - The output file should be a .txt file.
   - If the output file already exists, the contents will be overwritten.
   - If the output file doesn't exist, it will be created.
@@ -30,7 +30,7 @@ The order of these flags does not matter.
 
 To quickly review the usage from the command promt, enter the following command:
 
-`python img2ascii.py -usage` 
+`python img2ascii.py -help` 
 
 ## Implementation
 A high-level description of the logical flow of this program is as follows:
