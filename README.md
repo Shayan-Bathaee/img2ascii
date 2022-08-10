@@ -11,7 +11,7 @@ This python program allows the user to convert any image into ASCII art. The inp
 ## Usage
 To run img2ascii, open up a command prompt window and navigate to the location of the file. Next, run the following command:
 
-`python img2ascii.py <image-file> -w <ascii-width> -i <inverted/non-inverted> -o <output-file>`
+`python img2ascii.py <image-file> -w <ascii-width> -i -o <output-file>`
 
 There are a few different flags in this command. Here is what they mean:
 - `-w` specifies the character width of the outputted ASCII text art.
