@@ -1,6 +1,11 @@
 # img2ascii
 This python program allows the user to convert any image into ASCII art. The inputs to this program are an image file and option parameters. The output, presented either in the console or in a .txt file, is an ASCII string representing the image.
 
+<div align='center'>
+<img src="https://github.com/user-attachments/assets/055708c6-ae1d-4654-b342-f2ec6de88586" alt="img2ascii example" width="75%"/>
+</div>
+
+
 ## Files
 - **img2ascii.py:** This file contains the python program that converts images into ASCII text.
 - **cow_example:** This folder contains an example image with two different output files. 
